@@ -1,0 +1,3 @@
+type,ghost
+name,‹UE•âŠ®‚³‚­‚ç
+directory,N_HokanSakura

@@ -1,0 +1,46 @@
+/* 伺か ゴースト用CSS - グリーンバック透過処理 */
+
+.ghost-surface-image {
+  /* グリーンバック（#00FF00）を透過 */
+  background: transparent;
+  
+  /* Canvas を使った透過処理のための準備 */
+  position: relative;
+}
+
+/* グリーンバック透過処理用の追加スタイル */
+.ghost-container {
+  pointer-events: auto;
+}
+
+.ghost-container .ghost-surface {
+  /* 透過処理のために画像をきれいに表示 */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+}
+
+/* ホバーエフェクト */
+.ghost-surface:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+/* コントロールボタンのスタイリング */
+.ghost-controls button {
+  margin: 2px;
+  padding: 2px 6px;
+  font-size: 10px;
+  background: rgba(255,255,255,0.8);
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.ghost-controls button:hover {
+  background: rgba(255,255,255,1);
+}
+
+.ghost-controls button:active {
+  background: rgba(200,200,200,1);
+}
